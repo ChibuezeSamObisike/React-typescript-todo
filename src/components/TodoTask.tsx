@@ -5,7 +5,8 @@ interface IProps {
   completeTask: (taskNametoDelete: string) => void;
   //completeTask(taskNametoDelete: string):void
 }
-const TodoTask: FC<IProps> = ({ task, completeTask }: IProps) => {
+const TodoTask: FC<IProps> = (props) => {
+const { task, completeTask } = props;
   return (
     <div className="task">
       <div className="content">
